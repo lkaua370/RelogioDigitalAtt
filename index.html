@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Analógico Premium P&B</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Partículas espaciais animadas por JS -->
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="clock-container" id="clockContainer">
+        <!-- Brilho radial animado atrás do relógio -->
+        <div class="ambient-glow"></div>
+
+        <!-- Anéis de background para efeito futurístico -->
+        <div class="outer-ring"></div>
+        <div class="inner-ring"></div>
+        <div class="data-ring"></div>
+
+        <div class="clock" id="mainClock">
+            <!-- Marcadores detalhados para o círculo interior -->
+            <div class="markers">
+                <div class="marker" style="--i:1"></div>
+                <div class="marker" style="--i:2"></div>
+                <div class="marker main" style="--i:3"><span>03</span></div>
+                <div class="marker" style="--i:4"></div>
+                <div class="marker" style="--i:5"></div>
+                <div class="marker main" style="--i:6"><span>06</span></div>
+                <div class="marker" style="--i:7"></div>
+                <div class="marker" style="--i:8"></div>
+                <div class="marker main" style="--i:9"><span>09</span></div>
+                <div class="marker" style="--i:10"></div>
+                <div class="marker" style="--i:11"></div>
+                <div class="marker main" style="--i:12"><span>12</span></div>
+            </div>
+
+            <!-- Ponteiros (agora contínuos) -->
+            <div class="hand hour" id="hour"></div>
+            <div class="hand minute" id="minute"></div>
+            <div class="hand second" id="second">
+                <div class="second-tail"></div>
+            </div>
+            
+            <!-- Miolo futurístico do relógio -->
+            <div class="center-core">
+                <div class="core-inner"></div>
+            </div>
+        </div>
+        
+        <!-- Data e Painel inferior -->
+        <div class="control-panel">
+            <div class="digital-panel">
+                <div class="date" id="date">SEG // 01 JAN</div>
+            </div>
+            
+            <!-- Botão de som -->
+            <button class="sound-toggle" id="soundToggle" title="Toggle Sound">
+                <svg id="icon-mute" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+                <svg id="icon-unmute" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Efeitos de grid sci-fi de fundo -->
+    <div class="bg-grid"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
